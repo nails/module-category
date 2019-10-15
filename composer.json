@@ -1,0 +1,31 @@
+{
+    "name": "nails\/module-category",
+    "keywords": [],
+    "homepage": "https:\/\/nailsapp.co.uk\/modules\/category",
+    "description": "This module brings a unified categorisation system to Nails apps",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "nails\/common": "dev-develop"
+    },
+    "require-dev": {
+        "phpunit\/phpunit": "8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nails\\Category\\": "src\/"
+        }
+    },
+    "extra": {
+        "nails": {
+            "moduleName": "module-category",
+            "type": "module",
+            "namespace": "Nails\\Category\\",
+            "data": {}
+        }
+    },
+    "scripts": {
+        "test": ".\/vendor\/bin\/phpunit"
+    }
+}
