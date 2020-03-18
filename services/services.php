@@ -1,9 +1,8 @@
 <?php
-/**
- * Define your module's services, models and factories.
- *
- * @link http://nailsapp.co.uk/docs/services
- */
+
+use Nails\Category\Model;
+use Nails\Category\Resource;
+
 return [
     /**
      * Classes/libraries which don't necessarily relate to a database table.
@@ -15,7 +14,15 @@ return [
      * Models generally represent database tables.
      * Once instantiated, a request for a model will always return the same instance.
      */
-    'models'    => [],
+    'models'    => [
+        'Category' => function (): Model\Category {
+            if (class_exists('\App\Category\Model\Category')) {
+                return new \App\Category\Model\Category();
+            } else {
+                return new Model\Category();
+            }
+        },
+    ],
 
     /**
      * A class for which a new instance is created each time it is requested.
@@ -25,5 +32,13 @@ return [
     /**
      * A class which represents an object from the database
      */
-    'resources' => [],
+    'resources' => [
+        'Category' => function ($mObj): Resource\Category {
+            if (class_exists('\App\Category\Resource\Category')) {
+                return new \App\Category\Resource\Category($mObj);
+            } else {
+                return new Resource\Category($mObj);
+            }
+        },
+    ],
 ];
