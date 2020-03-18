@@ -33,6 +33,7 @@ class Migration0 extends Base
                 `excerpt` varchar(150) DEFAULT NULL,
                 `thumb_id` int(11) unsigned DEFAULT NULL,
                 `cover_id` int(11) unsigned DEFAULT NULL,
+                `colour` varchar(150) DEFAULT NULL,
                 `body` mediumtext,
                 `created` datetime NOT NULL,
                 `created_by` int(11) unsigned DEFAULT NULL,

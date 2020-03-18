@@ -36,5 +36,8 @@ class Category extends Entity
     public $cover_id;
 
     /** @var string */
+    public $colour;
+
+    /** @var string */
     public $body;
 }
