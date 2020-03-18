@@ -36,4 +36,11 @@ class Category extends Base
      * @var string
      */
     const RESOURCE_PROVIDER = Constants::MODULE_SLUG;
+
+    /**
+     * Whether to automatically set slugs or not
+     *
+     * @var bool
+     */
+    const AUTO_SET_SLUG = true;
 }
