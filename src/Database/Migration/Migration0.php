@@ -12,7 +12,7 @@
  * @link
  */
 
-namespace Nails\Database\Migration\Nails\ModuleCategory;
+namespace Nails\Category\Database\Migration;
 
 use Nails\Common\Console\Migrate\Base;
 
