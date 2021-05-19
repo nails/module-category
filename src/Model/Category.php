@@ -12,7 +12,9 @@
 namespace Nails\Category\Model;
 
 use Nails\Category\Constants;
+use Nails\Cdn;
 use Nails\Common\Model\Base;
+use Nails\Common\Helper\Form;
 
 /**
  * Class Category
@@ -48,4 +50,30 @@ class Category extends Base
      * @var bool
      */
     const AUTO_SET_SLUG = true;
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * @inheritDoc
+     */
+    public function describeFields($sTable = null)
+    {
+        $aFields = parent::describeFields($sTable);
+
+        $aFields['thumb_id']
+            ->setType(Cdn\Helper\Form::FIELD_OBJECT_PICKER)
+            ->setLabel('Thumbnail');
+
+        $aFields['cover_id']
+            ->setType(Cdn\Helper\Form::FIELD_OBJECT_PICKER)
+            ->setLabel('Cover Image');
+
+        $aFields['colour']
+            ->setInfo('This should be a valid CSS colour value.');
+
+        $aFields['body']
+            ->setType(Form::FIELD_WYSIWYG);
+
+        return $aFields;
+    }
 }
