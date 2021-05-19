@@ -11,7 +11,12 @@
         "nails\/module-cdn": "dev-develop"
     },
     "require-dev": {
-        "phpunit\/phpunit": "8.*"
+        "phpunit/phpunit": "9.*",
+        "phpstan/phpstan": "0.*"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "analyse": "./vendor/bin/phpstan analyse -c .phpstan/config.neon"
     },
     "autoload": {
         "psr-4": {
@@ -25,8 +30,5 @@
             "namespace": "Nails\\Category\\",
             "data": {}
         }
-    },
-    "scripts": {
-        "test": ".\/vendor\/bin\/phpunit"
     }
 }
