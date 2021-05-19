@@ -3,10 +3,10 @@
 /**
  * This model handles interactions with the "nails_category" table.
  *
- * @package     Nails
- * @subpackage  module-category
- * @category    Model
- * @author      Nails Dev Team
+ * @package    Nails
+ * @subpackage module-category
+ * @category   Model
+ * @author     Nails Dev Team
  */
 
 namespace Nails\Category\Model;
@@ -14,6 +14,11 @@ namespace Nails\Category\Model;
 use Nails\Category\Constants;
 use Nails\Common\Model\Base;
 
+/**
+ * Class Category
+ *
+ * @package Nails\Category\Model
+ */
 class Category extends Base
 {
     /**

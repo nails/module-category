@@ -3,10 +3,10 @@
 /**
  * This reosurce represents a single category
  *
- * @package     Nails
- * @subpackage  module-category
- * @category    Reosurce
- * @author      Nails Dev Team
+ * @package    Nails
+ * @subpackage module-category
+ * @category   Resource
+ * @author     Nails Dev Team
  */
 
 namespace Nails\Category\Resource;
