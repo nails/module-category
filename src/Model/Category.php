@@ -51,6 +51,12 @@ class Category extends Base
      */
     const AUTO_SET_SLUG = true;
 
+    const FIELD_CLASSES = [
+        'thumb_id' => ['ModelFieldObject', Cdn\Constants::MODULE_SLUG],
+        'cover_id' => ['ModelFieldObject', Cdn\Constants::MODULE_SLUG]],
+        'body'     => 'ModelFieldWysiwyg',
+    ];
+
     // --------------------------------------------------------------------------
 
     /**
@@ -61,18 +67,13 @@ class Category extends Base
         $aFields = parent::describeFields($sTable);
 
         $aFields['thumb_id']
-            ->setType(Cdn\Helper\Form::FIELD_OBJECT_PICKER)
             ->setLabel('Thumbnail');
 
         $aFields['cover_id']
-            ->setType(Cdn\Helper\Form::FIELD_OBJECT_PICKER)
             ->setLabel('Cover Image');
 
         $aFields['colour']
             ->setInfo('This should be a valid CSS colour value.');
-
-        $aFields['body']
-            ->setType(Form::FIELD_WYSIWYG);
 
         return $aFields;
     }
