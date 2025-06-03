@@ -53,7 +53,7 @@ class Category extends Base
 
     const FIELD_CLASSES = [
         'thumb_id' => ['ModelFieldObject', Cdn\Constants::MODULE_SLUG],
-        'cover_id' => ['ModelFieldObject', Cdn\Constants::MODULE_SLUG]],
+        'cover_id' => ['ModelFieldObject', Cdn\Constants::MODULE_SLUG],
         'body'     => 'ModelFieldWysiwyg',
     ];
 
