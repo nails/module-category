@@ -33,7 +33,7 @@
     {
         "nails":
         {
-            "moduleName": "module-category",
+            "moduleName": "category",
             "type": "module",
             "namespace": "Nails\\Category\\",
             "data":
