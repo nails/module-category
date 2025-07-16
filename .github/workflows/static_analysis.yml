@@ -3,7 +3,7 @@ on:
     pull_request:
     # Run on push, but only if PHP files have changed
     push:
-        branches: [ main, develop ]
+        branches: [ main, develop, feature/pre-new-admin ]
         paths:
             - '**.php'
             - 'composer.json'
@@ -35,7 +35,7 @@ jobs:
                     restore-keys: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
 
             -   name: Install Composer dependencies
-                run: COMPOSER_ROOT_VERSION=dev-develop composer install --no-interaction --prefer-dist
+                run: COMPOSER_ROOT_VERSION=dev-feature/pre-new-admin composer install --no-interaction --prefer-dist
 
             -   name: Run PHPStan
                 run: composer analyse
