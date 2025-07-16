@@ -33,11 +33,11 @@ return [
      * A class which represents an object from the database
      */
     'resources' => [
-        'Category' => function ($mObj): Resource\Category {
+        'Category' => function ($resource, $model): Resource\Category {
             if (class_exists('\App\Category\Resource\Category')) {
-                return new \App\Category\Resource\Category($mObj);
+                return new \App\Category\Resource\Category($resource, $model);
             } else {
-                return new Resource\Category($mObj);
+                return new Resource\Category($resource, $model);
             }
         },
     ],
