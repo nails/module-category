@@ -1,43 +1,35 @@
 {
     "name": "nails/module-category",
-    "keywords":
-    [],
+    "keywords": [],
     "homepage": "https://nailsapp.co.uk/modules/category",
     "description": "This module brings a unified categorisation system to Nails apps",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require":
-    {
+    "require": {
+        "php": ">=8.3",
         "nails/common": "dev-feature/pre-new-admin",
         "nails/module-cdn": "dev-feature/pre-new-admin"
     },
-    "require-dev":
-    {
-        "phpunit/phpunit": "9.*",
-        "phpstan/phpstan": "1.*"
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "phpstan/phpstan": "^2.0"
     },
-    "scripts":
-    {
+    "scripts": {
         "test": "./vendor/bin/phpunit",
         "analyse": "./vendor/bin/phpstan analyse -c .phpstan/config.neon"
     },
-    "autoload":
-    {
-        "psr-4":
-        {
+    "autoload": {
+        "psr-4": {
             "Nails\\Category\\": "src/"
         }
     },
-    "extra":
-    {
-        "nails":
-        {
+    "extra": {
+        "nails": {
             "moduleName": "category",
             "type": "module",
             "namespace": "Nails\\Category\\",
-            "data":
-            {}
+            "data": {}
         }
     }
 }
