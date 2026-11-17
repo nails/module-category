@@ -9,7 +9,7 @@
  * @author     Nails Dev Team
  */
 
-namespace Nails\Admin\Category;
+namespace Nails\Category\Admin\Controller;
 
 use Nails\Admin\Controller\DefaultController;
 use Nails\Category\Constants;
@@ -17,7 +17,7 @@ use Nails\Category\Constants;
 /**
  * Class Category
  *
- * @package Nails\Admin\Category
+ * @package Nails\Category\Admin\Controller
  */
 class Category extends DefaultController
 {
